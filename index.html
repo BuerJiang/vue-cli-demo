@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>vue-test</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <script>
+    window.APP_ID = '501';
+    window.APP_NAME = 'counterarms';
+    window.APP_IOS_PKG = 'id1547224029';
+    window.APP_ANDROID_PKG = 'com.ujoy.counterarms';
+    window.APP_TWI_NAME = 'CounterArms';
+
+    // 移动端地址切换
+    // window.CDN_URL = 'https://cepheusm.ujoygames.co.kr';
+    window.API_URL = 'https://api-cepheusm.ujoygames.co.kr';
+    window.WEBSITE_URL = window.location.href.replace('/index.html', '');
+    window.CDN_URL = window.location.href.replace('/index.html', '');
+    window.SHARE_CONTEXT = '世界を救おう！『カウンター・アームズ』ただいま事前登録受付中！登録者数に応じて、ゲーム内アイテムをプレゼント！#カウンター・アームズ';
+    try {
+      if (!window.location.hash.match('fromapp')
+        && (/iphone|ipod|android|ios|mobile/i.test(navigator.userAgent.toLowerCase()))) {
+        window.location = WEBSITE_URL + '/m/index.html' + window.location.search;
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=Emulate IE7">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>vue-test</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
 </html>
