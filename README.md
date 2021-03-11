@@ -1,4 +1,4 @@
-# vue-cli, axions，跨域已配置
+# vue-cli, axions，跨域已配置,bootstrap
 # vue-test
 
 > A Vue.js project
